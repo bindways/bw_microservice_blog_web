@@ -1,0 +1,112 @@
+
+/*TEXT*/
+.bw-text-space-1r{
+  letter-spacing: 1rem;
+  word-spacing: 1rem;
+}
+
+.bw-ta-center{
+  text-align: center;
+}
+
+.bw-ta-end{
+  text-align: end;
+}
+
+.bw-ta-start{
+  text-align: start;
+}
+
+.bw-ta-just{
+  text-align: justify;
+}
+
+.bw-lh-1r {
+  line-height: 1rem;
+}
+
+.bw-lh-2r {
+  line-height: 2rem;
+}
+
+.bw-lh-4r {
+  line-height: 4rem;
+}
+
+.bw-no-decor{
+  text-decoration: none;
+}
+
+.bw-text-ellipse{
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.bw-text-ellipse-2{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.bw-text-ellipse-3{
+  display: -webkit-box;
+  overflow: hidden;
+  display: -moz-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+}
+
+.no-wrap{
+  white-space: nowrap;
+}
+
+.bw-td-orange-60 {
+  text-decoration-color: var(--orange-60);
+}
+
+.bw-td-orange-80 {
+  text-decoration-color: var(--orange-80);
+}
+
+.bw-td-underline {
+  text-decoration-line: underline;
+}
+
+.normal-wrap{
+  white-space: normal;
+}
+
+.bw-word-break{
+  word-break: break-word;
+}
+
+.bw-va-middle{
+  vertical-align: middle;
+}
+
+.bw-va-top{
+  vertical-align: text-top;
+}
+/*TEXT TRANSFORM*/
+.bw-uppercase{
+  text-transform: uppercase;
+}
+
+.bw-capitalize{
+  text-transform: capitalize;
+}
+
+.bw-lowercase{
+  text-transform: lowercase;
+}
+
+/*LETTER*/
+.ls-0{
+  letter-spacing: 0;
+}
+
+.word-space--4px{
+  word-spacing: -4px;
+}

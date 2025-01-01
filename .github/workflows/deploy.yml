@@ -1,0 +1,86 @@
+name: Build and Deploy Go Binary to EC2
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  SERVICE_PATH: /mnt/bindways/bw/
+  SERVICE_NAME: ${{ github.event.repository.name }}
+  EC2_USER: ${{ secrets.EC2_001_USER }}
+  EC2_HOST: ${{ secrets.EC2_001_HOST }}
+  EC2_SSH_KEY: ${{ secrets.EC2_001_SSH_KEY }}
+  GH_TOKEN: ${{ secrets.GH_001_TOKEN }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Go
+        uses: actions/setup-go@v3
+        with:
+          go-version: '1.22'
+
+      - name: Configure Git for private repositories
+        run: |
+          git config --global url."https://${{ env.GH_TOKEN }}@github.com/".insteadOf "https://github.com/"
+
+      - name: Build for ARM architecture
+        env:
+          GOPRIVATE: github.com/bindways/*
+        run: |
+          GOARCH=arm64 GOOS=linux go build -o golang-build-temp ./main/main.go
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifact
+          path: |
+            ./golang-build-temp
+            ./static
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: ./artifact-directory
+
+      - name: Turn binary executable
+        run: |
+          echo "${{ env.EC2_SSH_KEY }}" > private_key.pem
+          chmod 400 private_key.pem
+
+      - name: Send build to EC2
+        run: |
+          scp -i private_key.pem -o StrictHostKeyChecking=no -r ./artifact-directory/* ${{ env.EC2_USER }}@${{ env.EC2_HOST }}:${{ env.SERVICE_PATH }}${{ env.SERVICE_NAME }}
+
+  restart:
+    runs-on: ubuntu-latest
+    needs: deploy
+
+    steps:
+      - name: Turn binary executable
+        run: |
+          echo "${{ env.EC2_SSH_KEY }}" > private_key.pem
+          chmod 400 private_key.pem
+
+      - name: Start New Instance
+        run: |
+          ssh -i private_key.pem -o StrictHostKeyChecking=no ${{ env.EC2_USER }}@${{ env.EC2_HOST }} << 'EOF'
+            cd ${{ env.SERVICE_PATH }}${{ env.SERVICE_NAME }}
+            pkill -f -9 ${{ env.SERVICE_NAME }}
+            mv golang-build-temp ${{ env.SERVICE_NAME }}
+            chmod +x ${{ env.SERVICE_NAME }}  
+            nohup ./${{ env.SERVICE_NAME }} -env prod > /dev/null 2>&1 &
+            exit
+          EOF

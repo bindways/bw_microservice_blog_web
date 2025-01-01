@@ -1,0 +1,505 @@
+/*DISPLAY*/
+.bw-d-none {
+  display: none;
+}
+
+.bw-d-block {
+  display: block;
+}
+
+.bw-d-block-i {
+  display: block !important;
+}
+
+.bw-d-none-i {
+  display: none !important;
+}
+
+/*COLUMN WIDTH*/
+.bw-cw-20r {
+  column-width: 20rem;
+}
+
+/*BLOCK*/
+.bw-block {
+  display: block;
+}
+
+.bw-in-block {
+  display: inline-block;
+}
+
+/*INLINE*/
+
+.bw-inline {
+  display: inline;
+}
+
+.bw-inline-block {
+  display: inline-block;
+}
+
+.bw-inline-flex {
+  display: inline-flex;
+}
+
+.bw-centralize {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+}
+
+/*FLEX*/
+.bw-flex {
+  display: flex;
+  display: -ms-flexbox;
+}
+
+/*wrap*/
+.bw-flex-wrap-r {
+  flex-wrap: wrap-reverse;
+}
+
+/*direction*/
+.bw-flex-col {
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+}
+
+.bw-flex-col-rev {
+  flex-direction: column-reverse;
+}
+
+.bw-flex-row-r {
+  flex-direction: row-reverse;
+}
+
+.bw-flex-row-r-i {
+  flex-direction: row-reverse !important;
+}
+
+/*justify-content*/
+.bw-just-cont-around {
+  justify-content: space-around;
+}
+
+/* align self*/
+.bw-align-self-start {
+  align-self: start;
+}
+
+.bw-align-self-center {
+  align-self: center;
+}
+
+.bw-align-self-end {
+  align-self: end;
+}
+
+/*align-content*/
+.bw-align-cont-start {
+  align-content: start;
+}
+
+.bw-align-cont-center {
+  align-content: center;
+}
+
+.bw-align-cont-btw {
+  align-content: space-between;
+}
+
+
+/*align-item*/
+.bw-align-item-center {
+  align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+}
+
+.bw-align-items-start {
+  align-items: start;
+}
+
+.bw-align-items-center {
+  align-items: center;
+}
+
+.bw-align-items-end {
+  align-items: end;
+}
+
+.bw-align-item-base {
+  align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+}
+
+.bw-align-item-start {
+  align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+}
+
+.bw-align-item-stretch {
+  align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+}
+
+.bw-align-item-end {
+  align-items: end;
+}
+
+
+/*justify content*/
+.bw-just-cont-btw {
+  justify-content: space-between;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+}
+
+.bw-just-cont-evl {
+  justify-content: space-evenly;
+}
+
+.bw-just-cont-cent {
+  justify-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+}
+
+.bw-just-cont-end {
+  justify-content: end;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+}
+
+.bw-just-cont-start {
+  justify-content: start;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+}
+
+/*justify-items*/
+.bw-just-item-end {
+  justify-items: end;
+}
+
+
+/*justify self*/
+.bw-just-self-start {
+  justify-self: start;
+}
+
+.bw-just-self-end {
+  justify-self: end;
+}
+
+.bw-just-self-center {
+  justify-self: center;
+}
+
+
+/*GAP*/
+.bw-r-gap-05r {
+  row-gap: 0.5rem;
+}
+
+.bw-r-gap-1r {
+  row-gap: 1rem;
+}
+
+.bw-r-gap-1_5r {
+  row-gap: 1.5rem;
+}
+
+.bw-r-gap-2r {
+  row-gap: 2rem;
+}
+
+.bw-r-gap-2_5r {
+  row-gap: 2.5rem;
+}
+
+.bw-r-gap-3r {
+  row-gap: 3rem;
+}
+
+.bw-r-gap-4r {
+  row-gap: 4rem;
+}
+
+.bw-c-gap-05r {
+  column-gap: 0.5rem;
+}
+
+.bw-gap-02r {
+  gap: 0.2rem;
+}
+
+.bw-gap-03r {
+  gap: 0.3rem;
+}
+
+.bw-gap-05r {
+  gap: 0.5rem;
+}
+
+.bw-gap-rl-05r {
+  gap: 0 0.5rem;
+}
+
+.bw-gap-1r {
+  gap: 1rem;
+}
+
+.bw-gap-1_5r {
+  gap: 1.5rem;
+}
+
+.bw-gap-2r {
+  gap: 2rem;
+}
+
+.bw-gap-2_5r {
+  gap: 2.5rem;
+}
+
+.bw-gap-3r {
+  gap: 3rem;
+}
+
+.bw-gap-4r {
+  gap: 4rem;
+}
+
+/*WRAP*/
+.bw-flex-wrap {
+  flex-wrap: wrap;
+}
+
+.bw-flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.bw-wrap-rev {
+  flex-wrap: wrap-reverse;
+}
+
+
+/*GROW*/
+.bw-grow-1 {
+  flex-grow: 1;
+}
+
+.bw-grow-child-1 > * {
+  flex-grow: 1;
+}
+
+.bw-grow-2 {
+  flex-grow: 2;
+}
+
+.bw-grow-3 {
+  flex-grow: 3;
+}
+
+.bw-grow-5 {
+  flex-grow: 5;
+}
+
+.bw-grow-15 {
+  flex-grow: 15;
+}
+
+.bw-grow-20 {
+  flex-grow: 20;
+}
+
+/*SHRINK*/
+.bw-shrink-0 {
+  flex-shrink: 0;
+}
+
+.bw-shrink-1 {
+  flex-shrink: 1;
+}
+
+.bw-shrink-2 {
+  flex-shrink: 2;
+}
+
+/*BASIS*/
+.bw-basis-80p {
+  flex-basis: 80%;
+}
+
+.bw-basis-1r {
+  flex-basis: 1rem;
+}
+
+.bw-basis-3r {
+  flex-basis: 3rem;
+}
+
+.bw-basis-4r {
+  flex-basis: 4rem;
+}
+
+.bw-basis-5r {
+  flex-basis: 5rem;
+}
+
+.bw-basis-9r {
+  flex-basis: 9rem;
+}
+
+.bw-basis-6r {
+  flex-basis: 6rem;
+}
+
+.bw-basis-7r {
+  flex-basis: 7rem;
+}
+
+.bw-basis-8r {
+  flex-basis: 8rem;
+}
+
+.bw-basis-13r {
+  flex-basis: 13rem;
+}
+
+.bw-basis-14r {
+  flex-basis: 14rem;
+}
+
+.bw-basis-15r {
+  flex-basis: 15rem;
+}
+
+.bw-basis-child-1r > * {
+  flex-basis: 1rem;
+}
+
+.bw-basis-child-15r > * {
+  flex-basis: 15rem;
+}
+
+.bw-basis-child-20r > * {
+  flex-basis: 20rem;
+}
+
+.bw-basis-16r {
+  flex-basis: 16rem;
+}
+
+.bw-basis-18r {
+  flex-basis: 18rem;
+}
+
+.bw-basis-17r {
+  flex-basis: 17rem;
+}
+
+.bw-basis-22r {
+  flex-basis: 22rem;
+}
+
+.bw-basis-24r {
+  flex-basis: 24rem;
+}
+
+.bw-basis-27r {
+  flex-basis: 27rem;
+}
+
+/*GRID*/
+.bw-grid {
+  display: grid;
+  display: -ms-grid;
+}
+
+.bw-grid-just-content-end {
+  justify-content: end;
+  -ms-grid-column-align: end;
+}
+
+.bw-grid-col-auto-14r {
+  grid-template-columns: repeat(auto-fill, 14rem);
+}
+
+.bw-grid-col-auto-15r {
+  grid-template-columns: repeat(auto-fill, 15rem);
+}
+
+.bw-grid-col-auto-17r {
+  grid-template-columns: repeat(auto-fill, 17rem);
+}
+
+.bw-grid-col-auto-20r {
+  grid-template-columns: repeat(auto-fill, 20rem);
+}
+
+.bw-grid-col-auto-24r {
+  grid-template-columns: repeat(auto-fill, 24rem);
+}
+
+.bw-grid-col-auto-25r {
+  grid-template-columns: repeat(auto-fill, 25rem);
+}
+
+.bw-grid-one {
+  grid-area: one;
+}
+
+.bw-grid-two {
+  grid-area: two;
+}
+
+.bw-grid-three {
+  grid-area: three;
+}
+
+.bw-grid-four {
+  grid-area: four;
+}
+
+.bw-grid-five {
+  grid-area: five;
+}
+
+.bw-grid-six {
+  grid-area: six;
+}
+
+.bw-grid-seven {
+  grid-area: seven;
+}
+
+.bw-grid-eight {
+  grid-area: eight;
+}
+
+
+/*SCROLL*/
+.bw-scroll-mandatory-x{
+  scroll-snap-type: x mandatory;
+}
+
+.bw-scroll-snap-start{
+  scroll-snap-align: start;
+}
+
+.bw-scroll-snap-center{
+  scroll-snap-align: center;
+}

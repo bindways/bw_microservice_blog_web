@@ -1,0 +1,107 @@
+.bw-img-fluid{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/*WIDTH & HEIGHT*/
+.bw-wh-2r{
+  height: 2rem;
+  width: 2rem;
+}
+
+.bw-wh-3r{
+  height: 3rem;
+  width: 3rem;
+}
+
+.bw-wh-3_5r{
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.bw-wh-4r{
+  height: 4rem;
+  width: 4rem;
+}
+
+.bw-wh-5r{
+  height: 5rem;
+  width: 5rem;
+}
+
+.bw-wh-8r{
+  height: 8rem;
+  width: 8rem;
+}
+
+.bw-hw-100p{
+  width: 100%;
+  height: 100%;
+}
+
+/*OTHER*/
+.bw-no-wrap-world {
+  white-space: nowrap;
+}
+.bw-list-no-dot {
+  list-style-type: none;
+}
+.bw-list-dot {
+  list-style: inside;
+}
+.bw-resize-img {
+  width: 100%;
+  height: auto;
+}
+
+/*CSS-SCROLL*/
+.bw-disable-scroll{
+  overflow: hidden;
+}
+
+.bw-scroll-x{
+  overflow-x: scroll;
+}
+
+.bw-overflow-auto {
+  overflow: auto;
+}
+
+.bw-overflow-hidden {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.bw-scroll-x-hidden{
+  overflow-x: hidden;
+}
+
+.bw-scroll-x-auto{
+  overflow-x: auto;
+}
+
+.bw-scroll-x {
+  overflow-x: scroll;
+}
+
+.bw-scroll-y{
+  overflow-y: scroll;
+}
+
+.bw-scroll-y-auto{
+  overflow-y: auto;
+}
+
+.bw-scroll-y-hidden{
+  overflow-y: hidden;
+}
+
+.bw-overflow-y {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.bw-fit-cover{
+  object-fit: cover;
+}
