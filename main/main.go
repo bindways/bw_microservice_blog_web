@@ -8,5 +8,5 @@ import (
 
 func main() {
 	new(bw_logger.LogServerClient).Constructor(bw_router.BwMicroserviceHomeApp.NameMicroservice).Connect()
-	server.BwAppHomeServer()
+	server.BwWebBlogServer()
 }

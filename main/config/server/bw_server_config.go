@@ -15,7 +15,7 @@ import (
  * any kind of angular router url specific to load app, so if there aren't a router
  * we pass to index angular file index.html.
  */
-func BwAppHomeServer() {
+func BwWebBlogServer() {
 	engine := gin.Default()
 	new(bw_handler_gin.BwMetricConfig).
 		Constructor1(engine).
