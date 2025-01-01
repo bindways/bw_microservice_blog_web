@@ -1,0 +1,41 @@
+@import "bw-variables.css";
+@import "bw-reset2.css";
+@import "bw-grid.css";
+@import "bw-font.css";
+@import "bw-button.css";
+@import "bw-color.css";
+@import "bw-margin.css";
+@import "bw-size.css";
+@import "bw-border.css";
+@import "bw-display.css";
+@import "bw-height.css";
+@import "bw-neomorphic.css";
+@import "bw-padding.css";
+@import "bw-pointer.css";
+@import "bw-position.css";
+@import "bw-width.css";
+@import "bw-animation.css";
+@import "bw-badge.css";
+@import "bw-input.css";
+@import "bw-event.css";
+@import "bw-text.css";
+@import "bw-chip.css";
+@import "bw-responsible.css";
+@import "bw-image.css";
+
+html, body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*min-height: 100vh;*/
+  /*height: 100%;*/
+}
+
+body {
+  font-family: segoe, sans-serif;
+  color: var(--grey-80);
+  font-size: 16px;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}

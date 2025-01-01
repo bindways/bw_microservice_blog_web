@@ -1,0 +1,365 @@
+/*PADDING*/
+
+.bw-p-0-i {
+  padding: 0;
+}
+
+.bw-p--1r {
+  padding: -1rem;
+}
+
+.bw-p-0 {
+  padding: 0;
+}
+
+.bw-p-3px {
+  padding: 3px;
+}
+
+.bw-p-2px {
+  padding: 2px;
+}
+
+.bw-p-5px {
+  padding: 5px;
+}
+
+.bw-p-02r {
+  padding: 0.2rem;
+}
+
+.bw-p-03r {
+  padding: 0.3rem;
+}
+
+.bw-p-05r {
+  padding: 0.5rem;
+}
+
+.bw-p-08r {
+  padding: 0.8rem;
+}
+
+.bw-p-1r {
+  padding: 1rem;
+}
+
+.bw-p-1_5r {
+  padding: 1.5rem;
+}
+
+
+.bw-p-2r {
+  padding: 2rem;
+}
+
+.bw-p-2_5r {
+  padding: 2.5rem;
+}
+
+.bw-p-3r {
+  padding: 3rem;
+}
+
+
+/*RIGHT*/
+.bw-pr-0_5r {
+  padding-right: 0.5rem;
+}
+
+.bw-pr-1r {
+  padding-right: 1rem;
+}
+
+.bw-pr-2r {
+  padding-right: 2rem;
+}
+
+/*RIGHT AND LEFT*/
+.bw-prl-03r {
+  padding-right: 0.3rem;
+  padding-left: 0.3rem;
+}
+
+.bw-prl-04r {
+  padding-right: 0.4rem;
+  padding-left: 0.4rem;
+}
+
+.bw-prl-08r {
+  padding-right: 0.8rem;
+  padding-left: 0.8rem;
+}
+
+.bw-prl-09r {
+  padding-right: 0.9rem;
+  padding-left: 0.9rem;
+}
+
+.bw-prl-05r {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.bw-prl-1r {
+  padding: 0 1rem;
+}
+
+.bw-prl-4px {
+  padding: 0 4px;
+}
+
+.bw-prl-1_5r {
+  padding: 0 1.5rem;
+}
+
+.bw-prl-2r {
+  padding: 0 2rem;
+}
+
+.bw-prl-3r {
+  padding-right: 3rem;
+  padding-left: 3rem;
+}
+
+.bw-prl-4r {
+  padding-right: 4rem;
+  padding-left: 4rem;
+}
+
+/*PADDING BOTTOM*/
+.bw-pb-0 {
+  padding-bottom: 0;
+}
+
+.bw-pb-0-i {
+  padding-bottom: 0 !important;
+}
+
+.bw-pb-02r {
+  padding-bottom: 0.2rem;
+}
+
+.bw-pb-05r {
+  padding-bottom: 0.5rem;
+}
+
+.bw-pb-1r {
+  padding-bottom: 1rem;
+}
+
+.bw-pb-2r {
+  padding-bottom: 2rem;
+}
+
+.bw-pb-3r {
+  padding-bottom: 3rem;
+}
+
+
+/*PADDING-LEFT*/
+.bw-pl-05r {
+  padding-left: 0.5rem;
+}
+
+.bw-pl-0_8r {
+  padding-left: 0.8rem;
+}
+
+.bw-pl-0 {
+  padding-left: 0 !important;
+}
+
+.bw-pl-1r {
+  padding-left: 1rem !important;
+}
+
+.bw-pl-1_1r {
+  padding-left: 1.1rem;
+}
+
+.bw-pl-1_3r {
+  padding-left: 1.3rem;
+}
+
+.bw-pl-1_4r {
+  padding-left: 1.4rem;
+}
+
+.bw-pl-1_5r {
+  padding-left: 1.5rem;
+}
+
+.bw-pl-2r {
+  padding-left: 2rem;
+}
+
+.bw-pl-3r {
+  padding-left: 3rem;
+}
+
+.bw-pl-5r {
+  padding-left: 5rem;
+}
+
+
+.bw-pt-0 {
+  padding-top: 0;
+}
+
+.bw-border-box {
+  box-sizing: border-box;
+}
+
+.bw-pt-0_2r {
+  padding-top: 0.2rem;
+  box-sizing: border-box;
+}
+
+.bw-pt-05r {
+  padding-top: 0.5rem;
+  box-sizing: border-box;
+}
+
+.bw-pt-1r {
+  padding-top: 1rem;
+  box-sizing: border-box;
+}
+
+.bw-pt-2r {
+  padding-top: 2rem;
+  box-sizing: border-box;
+}
+
+.bw-pt-2_5r {
+  padding-top: 2.5rem;
+}
+
+.bw-pt-3r {
+  padding-top: 3rem;
+  box-sizing: border-box;
+}
+
+.bw-pt-4r {
+  padding-top: 4rem;
+  box-sizing: border-box;
+}
+
+.bw-pt-5r {
+  padding-top: 5rem;
+  box-sizing: border-box;
+}
+
+.bw-pt-6r {
+  padding-top: 6rem;
+  box-sizing: border-box;
+}
+
+.bw-pt-8r {
+  padding-top: 8rem;
+  box-sizing: border-box;
+}
+
+.bw-pt-9r {
+  padding-top: 9rem;
+  box-sizing: border-box;
+}
+
+.bw-ptb-01r {
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  box-sizing: border-box;
+}
+
+.bw-ptb-02r {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  box-sizing: border-box;
+}
+
+.bw-ptb-04r {
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  box-sizing: border-box;
+}
+
+.bw-ptb-05r {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  box-sizing: border-box;
+}
+
+.bw-ptb-01r {
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  box-sizing: border-box;
+}
+
+.bw-ptb-02r {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+
+.bw-ptb-04r {
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  box-sizing: border-box;
+}
+
+.bw-ptb-05r {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.bw-ptb-08r {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  box-sizing: border-box;
+}
+
+.bw-ptb-1r {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.bw-ptb-1_5r {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.bw-ptb-1_3r {
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
+}
+
+.bw-ptb-2r {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.bw-ptb-3r {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.bw-ptb-4r {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.bw-ptb-5r {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.bw-ptb-10r {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  box-sizing: border-box;
+}
+
+.bw-ptb-10px {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}

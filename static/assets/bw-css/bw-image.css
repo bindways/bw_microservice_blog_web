@@ -1,0 +1,19 @@
+.bw-img-check-circle-blue-fill::before {
+  content: url("./../bw-svg/sm/check-circle-blue-fill.svg");
+  height: 1.1rem;
+}
+
+.bw-img-check-circle-blue-outline::before {
+  content: url("./../bw-svg/sm/check-circle-blue-outline.svg");
+  height: 1.1rem;
+}
+
+.bw-img-check-circle-grey-outline::before {
+  content: url("./../bw-svg/sm/check-circle-grey-outline.svg");
+  height: 1.1rem;
+}
+
+.bw-img-check-square-grey-fill.svg::before {
+  content: url('./../bw-svg/sm/check-square-grey-fill.svg');
+  height: 1.1rem;
+}

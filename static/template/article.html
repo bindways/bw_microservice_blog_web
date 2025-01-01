@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="{{.Article.Metadata.Description}}">
+        <meta name="keywords" content="{{.Article.Metadata.Keywords}}">
+        <meta property="og:title" content="{{.Article.Metadata.OgTitle}}">
+        <meta property="og:description" content="{{.Article.Metadata.OgDescription}}">
+        <meta property="og:image" content="{{.Article.Metadata.OgImage}}">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <base href="/bw/blog/web/">
+        <link rel="stylesheet" href="assets/bw-css/bw-imports.css">
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+        <title>{{.Article.Metadata.Title}}</title>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPosting",
+                "name": "{{.Article.Metadata.Title}}",
+                "description": "{{.Article.Metadata.Description}}",
+                "keywords": "{{.Article.Metadata.Keywords}}"
+            }
+        </script>
+    </head>
+
+    <script>
+        function goToUrl(url) {
+            window.open(url, "_blank"); // Use a variável sem aspas
+        }
+    </script>
+
+    <body class="bw-bgc-white bw-prl-05r">
+
+        <!--Toolbar-->
+        <div class="bw-bgc-light-10 bw-font-segoe bw-sticky-top">
+            <div class="bw-flex bw-just-cont-btw bw-maxw-50r bw-ptb-1r bw-mrl-auto">
+                <img class="bw-h-2_5r" src="assets/bw-svg/sm/logo-horiz-bindways-blue.svg">
+                <button onclick="goToUrl('{{.ProjectUrl}}')" class="bw-btn bw-btn-3 bw-btn-circle bw-btn-primary">
+                    Acessar projeto
+                </button>
+            </div>
+        </div>
+
+        <div class="bw-maxw-50r bw-mrl-auto ">
+
+            <!--    First section-->
+            <div class="bw-mt-2r bw-flex bw-flex-wrap bw-gap-2r bw-just-cont-cent">
+                <div class="bw-grow-1 bw-basis-9r">
+                    <h1 class="bw-font-40px">{{.Article.Header}}</h1>
+                    <p class="bw-font-16px bw-mt-1r">{{.Article.Preview}}</p>
+                    <p class="bw-font-14px bw-mt-2r">Atualizado em {{.Article.UpdateAtDate | pipeDateLong}}</p>
+                </div>
+                <img class="bw-h-20r bw-maxw-20r" src="{{.Article.HeaderImage}}">
+            </div>
+            <div class="bw-line-horz-10 bw-mt-2r"></div>
+
+            <!--    Content-->
+            <div class="bw-font-18px">{{.Article.Content}}</div>
+
+            <!--    Hashtags-->
+            <div class="bw-mt-3r bw-mb-2r bw-flex bw-flex-wrap bw-gap-05r">
+                {{range .Article.Hashtag}}
+                <span class="bw-badge bw-badge-md bw-badge-blue bw-badge-circle">{{.}}</span>
+                {{end}}
+            </div>
+
+            <!--    Related articles-->
+            <h4 class="bw-font-30px bw-font-segoe-bold">Artigos relacionados</h4>
+            <div class="bw-mt-2r bw-mb-2r bw-flex bw-flex-col bw-gap-05r">
+                {{range .ArticleD1List}}
+                <div class="bw-flex bw-gap-1r bw-p-1r bw-b-light-30 bw-rad-1r bw-shadow-1">
+                    <img class="bw-h-10r bw-maxw-10r" src="{{.HeaderImage}}">
+                    <div>
+                        <p class="bw-font-20px bw-font-segoe-bold">{{.Header}}</p>
+                        <p class="bw-font-16px">{{.Preview}}</p>
+                        <div class="bw-flex bw-gap-1r bw-just-cont-btw bw-mt-1r">
+                            <button onclick="goToUrl('{{.SelfUrl}}')" class="bw-btn bw-btn-1 bw-btn-light-20">Ler mais</button>
+                            <p class="bw-font-14px">Atualizado em {{.UpdateAtDate | pipeDateLong}}</p>
+                        </div>
+                    </div>
+                </div>
+                {{end}}
+            </div>
+        </div>
+
+        <!--Fotter-->
+        <div class="bw-flex bw-flex-col bw-align-item-center bw-bgc-primary-100 bw-p-1_5r">
+            <img class="bw-h-2_5r" src="assets/bw-svg/sm/logo-horiz-bindways-white.svg">
+            <p class="bw-color-white bw-font-15px bw-mt-05r">©2025 Bindways - Todos os direitos reservados</p>
+        </div>
+    </body>
+</html>

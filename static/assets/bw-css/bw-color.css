@@ -1,0 +1,288 @@
+
+.bw-color-white {
+  color: white;
+}
+
+.bw-color-light-10 {
+  color: var(--light-10);
+}
+
+.bw-color-light-20 {
+  color: var(--light-20);
+}
+
+/*COLOR*/
+.bw-color-grey-10 {
+  color: var(--grey-20);
+}
+
+.bw-color-grey-20 {
+  color: var(--grey-20);
+}
+
+.bw-color-grey-40 {
+  color: var(--grey-40);
+}
+
+.bw-color-grey-60 {
+  color: var(--grey-60);
+}
+
+.bw-color-grey-70 {
+  color: var(--grey-70);
+}
+
+.bw-color-grey-80 {
+  color: var(--grey-80);
+}
+
+.bw-color-grey-90 {
+  color: var(--grey-90);
+}
+
+.bw-color-primary-100 {
+  color: var(--primary-100);
+}
+
+.bw-color-blue-tint-60 {
+  color: var(--blue-tint-60);
+}
+
+.bw-color-blue-tint-80 {
+  color: var(--blue-tint-80);
+}
+
+.bw-color-orange-0 {
+  color: var(--orange-0);
+}
+
+.bw-color-orange-20 {
+  color: var(--orange-20);
+}
+
+.bw-color-orange-30 {
+  color: var(--orange-40);
+}
+
+.bw-color-orange-60 {
+  color: var(--orange-60);
+}
+
+.bw-color-orange-80 {
+  color: var(--orange-80);
+}
+
+
+/*DANGER*/
+.bw-color-red-20 {
+  color: var(--red-20);
+}
+
+.bw-color-red-40 {
+  color: var(--red-40);
+}
+
+.bw-color-red-70 {
+  color: var(--red-70);
+}
+
+.bw-color-purple-40 {
+  color: var(--purple-40);
+}
+
+
+/*BACKGROUND*/
+.bw-bgc-white {
+  background-color: white;
+}
+
+.bw-bgc-transparent {
+  background-color: transparent;
+}
+
+.bw-bgc-light-0 {
+  background-color: var(--light-0);
+}
+
+.bw-bgc-light-0 {
+  background-color: var(--light-0);
+}
+
+.bw-bgc-light-10 {
+  background-color: var(--light-10);
+}
+
+.bw-bgc-light-20 {
+  background-color: var(--light-20);
+}
+
+.bw-bgc-light-30 {
+  background-color: var(--light-30);
+}
+
+.bw-bgc-light-40 {
+  background-color: var(--light-40);
+}
+
+.bw-bgc-light-50 {
+  background-color: var(--light-50);
+}
+
+.bw-bgc-grey-10 {
+  background-color: var(--grey-10);
+}
+
+.bw-bgc-grey-20 {
+  background-color: var(--grey-20);
+}
+
+.bw-bgc-grey-40 {
+  background-color: var(--grey-40);
+}
+
+.bw-bgc-grey-70 {
+  background-color: var(--grey-70);
+}
+
+.bw-bgc-grey-80 {
+  background-color: var(--grey-80);
+}
+
+.bw-bgc-red-20 {
+  background-color: var(--red-20);
+}
+
+.bw-bgc-red-40 {
+  background-color: var(--red-40);
+}
+
+.bw-bgc-red-60 {
+  background-color: var(--red-60);
+}
+
+.bw-bgc-red-70 {
+  background-color: var(--red-70);
+}
+
+.bw-bgc-black {
+  background-color: black;
+}
+
+.bw-bgc-primary-100 {
+  background-color: var(--primary-100);
+}
+
+.bw-bgc-blue-tint-60 {
+  background-color: var(--blue-tint-60);
+}
+
+.bw-bgc-blue-tint-80 {
+  background-color: var(--blue-tint-80);
+}
+
+.bw-bgc-yellow-20 {
+  background-color: var(--yellow-20);
+}
+
+.bw-bgc-yellow-30 {
+  background-color: var(--yellow-30);
+}
+
+.bw-bgc-yellow-40 {
+  background-color: var(--yellow-40);
+}
+
+.bw-bgc-yellow-50 {
+  background-color: var(--yellow-50);
+}
+
+.bw-bgc-yellow-60 {
+  background-color: var(--yellow-60);
+}
+
+.bw-bgc-yellow-70 {
+  background-color: var(--yellow-70);
+}
+
+.bw-bgc-yellow-80 {
+  background-color: var(--yellow-80);
+}
+
+.bw-bgc-yellow-90 {
+  background-color: var(--yellow-90);
+}
+
+.bw-bgc-orange-10 {
+  background-color: var(--orange-10);
+}
+.bw-bgc-orange-20 {
+  background-color: var(--orange-20);
+}
+.bw-bgc-orange-40 {
+  background-color: var(--orange-40);
+}
+.bw-bgc-orange-60 {
+  background-color: var(--orange-60);
+}
+
+
+.bw-blur-06px {
+  backdrop-filter: blur(6px);
+}
+
+/*OPACITY*/
+.bw-opacity-01 {
+  opacity: 0.1;
+}
+
+.bw-opacity-02 {
+  opacity: 0.2;
+}
+
+.bw-opacity-03 {
+  opacity: 0.3;
+}
+
+.bw-opacity-04 {
+  opacity: 0.4;
+}
+
+.bw-opacity-05 {
+  opacity: 0.5;
+}
+
+.bw-opacity-06 {
+  opacity: 0.6;
+}
+
+.bw-opacity-07 {
+  opacity: 0.7;
+}
+
+.bw-opacity-08 {
+  opacity: 0.8;
+}
+
+.bw-opacity-09 {
+  opacity: 0.9;
+}
+
+.bw-opacity-1 {
+  opacity: 1;
+}
+
+.bw-filter-primary {
+  filter: invert(57%) sepia(33%) saturate(6065%) hue-rotate(188deg) brightness(100%) contrast(101%);
+}
+
+.bw-filter-white {
+  filter: invert(100%) sepia(1%) saturate(2499%) hue-rotate(77deg) brightness(114%) contrast(100%);
+}
+
+.bw-filter-contrast-100 {
+  filter: contrast(100%)
+}
+
+.bw-filter-gray-100 {
+  filter: grayscale(100%)
+}

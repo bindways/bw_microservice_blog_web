@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt" class="article">
+<head class="title">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <base href="/bw/blog/web/">
+    <link rel="stylesheet" href="assets/template.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <title>Blog Bindways</title>
+</head>
+<body class="bw-bgc-grey-10">
+<div class="bw-bgc-primary-500 bw-minh-5r bw-p-3r">
+    <div class="bw-maxw-50r bw-mrl-auto bw-color-white bw-ta-center">
+        <h1 class="bw-font-50px">Bindways <span class="bw-font-24px bw-font-normal">Blog</span></h1>
+    </div>
+</div>
+<div class="bw-maxw-50r bw-mrl-auto bw-mt-3r bw-flex bw-flex-col bw-gap-1r">
+    {{range .Articles}}
+    <div class="card">
+        <h2 class="bw-font-segoe bw-font-normal bw-color-grey-80 bw-bold">{{.Header}}</h2>
+        <p class="bw-color-grey-70">{{.Preview}}</p>
+        <div class="bw-flex bw-just-cont-btw bw-align-item-center">
+            <a href="/{{$.ProjectName}}/blog/web/article/name/{{.ArticleMeta.UrlName}}" class="botao">Ver mais</a>
+            <p class="bw-color-grey-70">Criado em {{.CreateAtDate | pipeDate}}</p>
+        </div>
+    </div>
+    {{end}}
+</div>
+</body>
+</html>
