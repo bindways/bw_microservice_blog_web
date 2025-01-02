@@ -22,7 +22,6 @@ func BwWebBlogServer() {
 		ConfigMiddleware().
 		ConfigCustomHandler("health")
 	new(api.BwArticleWebController).Constructor1().Controller(engine)
-	new(api.BwAssetsController).ConfigAssetsHandler(engine)
 	bw_server.BwMicroservicePrintServer(&bw_router.BwMicroserviceBlogWeb)
 	err := engine.Run(bw_router.BwMicroserviceBlogWeb.GetPortHttp())
 	bw_error_helper.CheckPanic(err)
