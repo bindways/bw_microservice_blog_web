@@ -7,6 +7,6 @@ import (
 )
 
 func main() {
-	new(bw_logger.LogServerClient).Constructor(bw_router.BwMicroserviceHomeApp.NameMicroservice).Connect()
+	new(bw_logger.LogServerClient).Constructor(bw_router.BwMicroserviceBlogWeb.NameMicroservice).Connect()
 	server.BwWebBlogServer()
 }
