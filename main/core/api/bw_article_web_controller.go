@@ -3,6 +3,7 @@ package api
 import (
 	web2 "bw_microservice_blog_web/main/core/web"
 	"encoding/json"
+	"fmt"
 	bw_helper "github.com/bindways/bw_microservice_share2/bw_gin"
 	"github.com/gin-gonic/gin"
 	"go.mongodb.org/mongo-driver/bson/primitive"
@@ -19,6 +20,13 @@ func (t *BwArticleWebController) Constructor1() *BwArticleWebController {
 }
 
 func (t *BwArticleWebController) Controller(engine *gin.Engine) {
+
+	engine.GET("/:project/blog/web/assets/*remain",
+		func(context *gin.Context) {
+			remainPath := context.Param("remain")
+			context.File(fmt.Sprintf("static/assets/%s", remainPath))
+		},
+	)
 
 	engine.GET("/:project/blog/web/",
 		func(context *gin.Context) {
@@ -57,4 +65,7 @@ func (t *BwArticleWebController) Controller(engine *gin.Engine) {
 		},
 	)
 
+	engine.NoRoute(func(c *gin.Context) {
+		c.JSON(http.StatusNotFound, gin.H{"message": "Not found router.", "path": c.Request.URL.Path})
+	})
 }

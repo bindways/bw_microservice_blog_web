@@ -3,7 +3,7 @@
     <head class="title">
         <meta charset="UTF-8">
         <meta content="width=device-width, initial-scale=1" name="viewport">
-        <base href="/bw/blog/web/">
+        <base href="/{{.ProjectName}}/blog/web/">
         <link rel="stylesheet" href="assets/bw-css/bw-imports.css">
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
         <title>Blog Bindways</title>
@@ -25,9 +25,9 @@
     </div>
 
     <div class="bw-maxw-50r bw-mrl-auto">
-        <div class="bw-mt-2r bw-mb-2r bw-flex bw-flex-col bw-gap-2r">
+        <div class="bw-mt-2r bw-mb-2r bw-flex bw-flex-col bw-gap-1_5r">
             {{range .ArticleD1List}}
-            <div class="bw-flex bw-gap-1r bw-p-1r bw-b-light-30 bw-rad-1r bw-shadow-1 bw-bgc-light-10">
+            <div class="bw-flex bw-gap-1r bw-p-1r bw-b-light-30 bw-rad-1r bw-shadow-2 bw-bgc-light-10">
                 <img class="bw-h-10r bw-maxw-10r" src="{{.HeaderImage}}">
                 <div>
                     <h2 class="bw-font-20px bw-font-segoe-bold">{{.Header}}</h2>
