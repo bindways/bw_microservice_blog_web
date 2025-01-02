@@ -14,9 +14,7 @@ type BwPipeService struct {
  */
 func (t *BwPipeService) PipeDate() template.FuncMap {
 	return template.FuncMap{
-		"pipeDate": func(id primitive.ObjectID) string {
-			return id.Hex()
-		},
+		"pipeDate": bw_date_helper.ConvertDateToString,
 	}
 }
 

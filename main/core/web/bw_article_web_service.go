@@ -36,21 +36,15 @@ func (t *BwArticleWebService) Constructor2(
 func (t *BwArticleWebService) GetArticles(w http.ResponseWriter, project string) (err error) {
 	articles, err := t.microserviceBlogExternalDep.GetArticlesByProject(project)
 	if err != nil {
-		json.NewEncoder(w).Encode(err.Error())
 		return
 	}
-	tmpl := template.New("articles.html").
-		Funcs(t.pipeServiceDep.PipeDate()).
-		Funcs(t.pipeServiceDep.PipeObjectIdToHex())
-	tmpl, err = tmpl.ParseFiles("static/template/articles.html")
+	tmpl, err := template.New("articles.html").
+		Funcs(t.pipeServiceDep.PipeDateLong()).
+		ParseFiles("static/template/articles.html")
 	if err != nil {
-		_ = json.NewEncoder(w).Encode(err.Error())
 		return
 	}
-	articleData := entity.BwArticleData{
-		Articles:    articles,
-		ProjectName: project,
-	}
+	articleData := entity.NewBwArticleData(project, dto.NewBwArticlesD1(articles))
 	return tmpl.Execute(w, articleData)
 }
 
