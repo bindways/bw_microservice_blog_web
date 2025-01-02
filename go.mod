@@ -3,7 +3,7 @@ module bw_microservice_blog_web
 go 1.22
 
 require (
-	github.com/bindways/bw_microservice_share v1.5.9
+	github.com/bindways/bw_microservice_share v1.6.0
 	github.com/bindways/bw_microservice_share2 v1.2.1
 	github.com/gin-gonic/gin v1.9.1
 	go.mongodb.org/mongo-driver v1.11.6

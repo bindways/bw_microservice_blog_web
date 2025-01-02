@@ -1,7 +1,7 @@
 github.com/beorn7/perks v1.0.1 h1:VlbKKnNfV8bJzeqoa4cOKqO6bYr3WgKZxO8Z16+hsOM=
 github.com/beorn7/perks v1.0.1/go.mod h1:G2ZrVWU2WbWT9wwq4/hrbKbnv/1ERSJQ0ibhJ6rlkpw=
-github.com/bindways/bw_microservice_share v1.5.9 h1:P7Xb/9+DOMSWFVXmJomQsug3BbVp42rjd55Sq1JKSSY=
-github.com/bindways/bw_microservice_share v1.5.9/go.mod h1:Y6ky4cA7l7qkrlNaYTkglOP71VHKnR17adln/Y3+Hlw=
+github.com/bindways/bw_microservice_share v1.6.0 h1:kDOZf4Mr4Bcy6WAT+zOieb89MEPcZRjW4sFmBWlAf7M=
+github.com/bindways/bw_microservice_share v1.6.0/go.mod h1:Y6ky4cA7l7qkrlNaYTkglOP71VHKnR17adln/Y3+Hlw=
 github.com/bindways/bw_microservice_share2 v1.2.1 h1:GqmwFxu4iF5+L3rvRHBgH+q4FRPHUSp7qtktEkkULyI=
 github.com/bindways/bw_microservice_share2 v1.2.1/go.mod h1:GAyPR6jxPA7ocQckXGl8Ayef5txATZ1/glAtI+Tm+14=
 github.com/bytedance/sonic v1.5.0/go.mod h1:ED5hyg4y6t3/9Ku1R6dU/4KyJ48DZ4jPhfY1O2AihPM=
