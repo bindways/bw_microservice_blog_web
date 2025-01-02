@@ -1,30 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt" class="article">
-<head class="title">
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <base href="/bw/blog/web/">
-    <link rel="stylesheet" href="assets/template.css">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <title>Blog Bindways</title>
-</head>
-<body class="bw-bgc-grey-10">
-<div class="bw-bgc-primary-500 bw-minh-5r bw-p-3r">
-    <div class="bw-maxw-50r bw-mrl-auto bw-color-white bw-ta-center">
-        <h1 class="bw-font-50px">Bindways <span class="bw-font-24px bw-font-normal">Blog</span></h1>
-    </div>
-</div>
-<div class="bw-maxw-50r bw-mrl-auto bw-mt-3r bw-flex bw-flex-col bw-gap-1r">
-    {{range .Articles}}
-    <div class="card">
-        <h2 class="bw-font-segoe bw-font-normal bw-color-grey-80 bw-bold">{{.Header}}</h2>
-        <p class="bw-color-grey-70">{{.Preview}}</p>
-        <div class="bw-flex bw-just-cont-btw bw-align-item-center">
-            <a href="/{{$.ProjectName}}/blog/web/article/name/{{.ArticleMeta.UrlName}}" class="botao">Ver mais</a>
-            <p class="bw-color-grey-70">Criado em {{.CreateAtDate | pipeDate}}</p>
+    <head class="title">
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <base href="/bw/blog/web/">
+        <link rel="stylesheet" href="assets/bw-css/bw-imports.css">
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+        <title>Blog Bindways</title>
+    </head>
+
+    <script>
+        function goToUrl(url) {
+            window.open(url, "_blank"); // Use a variável sem aspas
+        }
+    </script>
+
+    <body class="bw-bgc-white bw-prl-05r">
+
+    <!--Toolbar-->
+    <div class="bw-bgc-primary-500 bw-minh-5r bw-p-3r">
+        <div class="bw-maxw-50r bw-mrl-auto bw-color-grey-80 bw-ta-center">
+            <h1 class="bw-font-50px">Bindways <span class="bw-font-24px bw-font-normal">Blog</span></h1>
         </div>
     </div>
-    {{end}}
-</div>
-</body>
+
+    <div class="bw-maxw-50r bw-mrl-auto">
+        <div class="bw-mt-2r bw-mb-2r bw-flex bw-flex-col bw-gap-2r">
+            {{range .ArticleD1List}}
+            <div class="bw-flex bw-gap-1r bw-p-1r bw-b-light-30 bw-rad-1r bw-shadow-1 bw-bgc-light-10">
+                <img class="bw-h-10r bw-maxw-10r" src="{{.HeaderImage}}">
+                <div>
+                    <h2 class="bw-font-20px bw-font-segoe-bold">{{.Header}}</h2>
+                    <p class="bw-font-16px">{{.Preview}}</p>
+                    <div class="bw-flex bw-gap-1r bw-just-cont-btw bw-mt-1r">
+                        <button onclick="goToUrl('{{.SelfUrl}}')" class="bw-btn bw-btn-1 bw-btn-primary bw-btn-circle">Ler mais</button>
+                        <p class="bw-font-14px">Atualizado em {{.UpdateAtDate | pipeDateLong}}</p>
+                    </div>
+                </div>
+            </div>
+            {{end}}
+        </div>
+    </div>
+    </body>
 </html>
