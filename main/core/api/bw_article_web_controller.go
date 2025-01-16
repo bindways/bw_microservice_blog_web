@@ -21,6 +21,9 @@ func (t *BwArticleWebController) Constructor1() *BwArticleWebController {
 
 func (t *BwArticleWebController) Controller(engine *gin.Engine) {
 
+	/**
+	 * return static assets
+	 */
 	engine.GET("/:project/blog/web/assets/*remain",
 		func(context *gin.Context) {
 			remainPath := context.Param("remain")
@@ -28,6 +31,9 @@ func (t *BwArticleWebController) Controller(engine *gin.Engine) {
 		},
 	)
 
+	/**
+	 * Get articles
+	 */
 	engine.GET("/:project/blog/web/",
 		func(context *gin.Context) {
 			project := context.Param("project")
@@ -39,7 +45,9 @@ func (t *BwArticleWebController) Controller(engine *gin.Engine) {
 		},
 	)
 
-	//Get article by id
+	/**
+	 * Get article by id
+	 */
 	engine.GET("/:project/blog/web/article/name/:urlName",
 		func(context *gin.Context) {
 			urlName := context.Param("urlName")
@@ -52,7 +60,9 @@ func (t *BwArticleWebController) Controller(engine *gin.Engine) {
 		},
 	)
 
-	//Get article by id (old format)
+	/**
+	 * Get article by id (old format)
+	 */
 	engine.GET("/:project/blog/web/article/:id",
 		func(context *gin.Context) {
 			idArticle, err := primitive.ObjectIDFromHex(context.Param("id"))
