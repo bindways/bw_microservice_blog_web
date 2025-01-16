@@ -48,7 +48,7 @@
                 <div class="bw-grow-1 bw-basis-9r">
                     <h1 class="bw-font-40px">{{.Article.Header}}</h1>
                     <p class="bw-font-16px bw-mt-1r">{{.Article.Preview}}</p>
-                    <p class="bw-font-14px bw-mt-2r">Atualizado em {{.Article.UpdateAtDate | pipeDateLong}}</p>
+                    <p class="bw-font-14px bw-mt-2r">Atualizado em {{.Article.UpdateAtDate | pipeDateLong}}  -  {{.Article.Track.Views}}  visualizações</p>
                 </div>
                 <img class="bw-h-20r bw-maxw-20r" src="{{.Article.HeaderImage}}">
             </div>
