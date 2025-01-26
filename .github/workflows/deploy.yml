@@ -37,7 +37,7 @@ jobs:
           GOARCH=arm64 GOOS=linux go build -o golang-build-temp ./main/main.go
 
       - name: Upload Build Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: build-artifact
           path: |
@@ -50,7 +50,7 @@ jobs:
 
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: build-artifact
           path: ./artifact-directory
