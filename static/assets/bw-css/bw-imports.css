@@ -13,6 +13,7 @@
 @import "bw-width.css";
 @import "bw-text.css";
 @import "bw-responsible.css";
+@import "bw-badge.css";
 
 html, body{
   margin: 0;
