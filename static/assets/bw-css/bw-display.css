@@ -375,6 +375,10 @@
   flex-basis: 8rem;
 }
 
+.bw-basis-10r {
+  flex-basis: 10rem;
+}
+
 .bw-basis-13r {
   flex-basis: 13rem;
 }
@@ -385,6 +389,10 @@
 
 .bw-basis-15r {
   flex-basis: 15rem;
+}
+
+.bw-basis-25r {
+  flex-basis: 25rem;
 }
 
 .bw-basis-child-1r > * {

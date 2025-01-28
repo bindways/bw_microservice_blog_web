@@ -27,12 +27,12 @@
     <div class="bw-maxw-50r bw-mrl-auto">
         <div class="bw-mt-2r bw-mb-2r bw-flex bw-flex-col bw-gap-1_5r">
             {{range .ArticleD1List}}
-            <div class="bw-flex bw-gap-1r bw-p-1r bw-b-light-30 bw-rad-1r bw-shadow-2 bw-bgc-light-10">
-                <img class="bw-h-10r bw-maxw-10r" src="{{.HeaderImage}}">
-                <div>
+            <div class="bw-flex bw-gap-1r bw-just-cont-cent bw-flex-wrap bw-p-1r bw-b-light-30 bw-rad-1r bw-shadow-2 bw-bgc-light-10">
+                <img class="bw-h-10r bw-maxw-10r bw-basis-10r" src="{{.HeaderImage}}">
+                <div class="bw-basis-25r bw-grow-1">
                     <h2 class="bw-font-20px bw-font-segoe-bold">{{.Header}}</h2>
                     <p class="bw-font-16px">{{.Preview}}</p>
-                    <div class="bw-flex bw-gap-1r bw-just-cont-btw bw-mt-1r">
+                    <div class="bw-flex bw-gap-1r bw-just-cont-btw bw-mt-1r bw-flex-wrap bw-align-item-center">
                         <button onclick="goToUrl('{{.SelfUrl}}')" class="bw-btn bw-btn-1 bw-btn-primary bw-btn-circle">Ler mais</button>
                         <p class="bw-font-14px">{{.Views}}  visualizações - Atualizado em {{.UpdateAtDate | pipeDateLong}}</p>
                     </div>

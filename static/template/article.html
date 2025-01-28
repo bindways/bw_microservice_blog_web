@@ -25,7 +25,7 @@
 
     <script>
         function goToUrl(url) {
-            window.open(url, "_blank"); // Use a variável sem aspas
+            window.location.replace(url);
         }
     </script>
 
@@ -35,7 +35,7 @@
         <div class="bw-bgc-light-10 bw-font-segoe bw-sticky-top bw-p-1r bw-p-md-0">
             <div class="bw-flex bw-just-cont-btw bw-maxw-50r bw-ptb-1r bw-mrl-auto">
                 <img class="bw-h-2_5r" src="assets/bw-svg/sm/logo-horiz-bindways-blue.svg">
-                <button onclick="goToUrl('{{.ProjectUrl}}')" class="bw-btn bw-btn-3 bw-btn-circle bw-btn-primary">
+                <button onclick="goToUrl('{{.ProjectUrl}}')" class="bw-btn bw-btn-2 bw-btn-md-3 bw-btn-circle bw-btn-primary">
                     Acessar projeto
                 </button>
             </div>
@@ -68,9 +68,9 @@
             <h4 class="bw-font-30px bw-font-segoe-bold">Artigos relacionados</h4>
             <div class="bw-mt-2r bw-mb-2r bw-flex bw-flex-col bw-gap-1r">
                 {{range .ArticleD1List}}
-                <div class="bw-flex bw-gap-1r bw-p-1r bw-b-light-30 bw-rad-1r bw-shadow-1">
-                    <img class="bw-h-10r bw-maxw-10r" src="{{.HeaderImage}}">
-                    <div>
+                <div class="bw-flex bw-gap-1r bw-just-cont-cent bw-flex-wrap bw-p-1r bw-b-light-30 bw-rad-1r bw-shadow-1">
+                    <img class="bw-h-10r bw-maxw-10r bw-basis-10r" src="{{.HeaderImage}}">
+                    <div class="bw-basis-25r bw-grow-1">
                         <p class="bw-font-20px bw-font-segoe-bold">{{.Header}}</p>
                         <p class="bw-font-16px">{{.Preview}}</p>
                         <div class="bw-flex bw-gap-1r bw-just-cont-btw bw-mt-1r">
