@@ -3,8 +3,8 @@ package web
 import (
 	"bw_microservice_blog_web/main/entity"
 	"bw_microservice_blog_web/main/external"
-	"encoding/json"
 	"github.com/bindways/bw_microservice_share/bw_microservice/bw_microservice_blog/dto"
+	entity2 "github.com/bindways/bw_microservice_share/bw_microservice/bw_microservice_blog/entity"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"html/template"
 	"net/http"
@@ -56,6 +56,24 @@ func (t *BwArticleWebService) GetArticleByName(w http.ResponseWriter, urlName st
 	if err != nil {
 		return
 	}
+	return t.ProcessArticle(w, project, article)
+}
+
+/**
+ * Get article by id
+ */
+func (t *BwArticleWebService) GetArticleById(w http.ResponseWriter, idArticle primitive.ObjectID, project string) (err error) {
+	article, err := t.microserviceBlogExternalDep.GetArticleByIdAndProject(idArticle, project)
+	if err != nil {
+		return
+	}
+	return t.ProcessArticle(w, project, article)
+}
+
+/**
+ * Process article building as template html and return to frontend
+ */
+func (t *BwArticleWebService) ProcessArticle(w http.ResponseWriter, project string, article entity2.BwArticle) (err error) {
 	articlesD1, err := t.microserviceBlogExternalDep.GetArticlesByProjectLimitedSize(project)
 	if err != nil {
 		return
@@ -69,24 +87,4 @@ func (t *BwArticleWebService) GetArticleByName(w http.ResponseWriter, urlName st
 		return
 	}
 	return tmpl.Execute(w, articleD2)
-}
-
-/**
- * Get article by id
- */
-func (t *BwArticleWebService) GetArticleById(
-	w http.ResponseWriter, idArticle primitive.ObjectID, project string) (err error) {
-
-	article, err := t.microserviceBlogExternalDep.GetArticleByIdAndProject(idArticle, project)
-	if err != nil {
-		json.NewEncoder(w).Encode(err.Error())
-		return
-	}
-	tmpl := template.New("article.html").Funcs(t.pipeServiceDep.PipeDate())
-	tmpl, err = tmpl.ParseFiles("static/template/article.html")
-	if err != nil {
-		_ = json.NewEncoder(w).Encode(err.Error())
-		return
-	}
-	return tmpl.Execute(w, article)
 }
