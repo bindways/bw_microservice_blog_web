@@ -3,13 +3,13 @@ module bw_microservice_blog_web
 go 1.22
 
 require (
-	github.com/bindways/bw_microservice_share v1.7.8
+	github.com/bindways/bw_microservice_share v1.7.9
 	github.com/bindways/bw_microservice_share2 v1.2.1
 	github.com/gofiber/fiber/v2 v2.52.5
 	go.mongodb.org/mongo-driver v1.11.6
 )
 
-replace github.com/bindways/bw_microservice_share => ./../bw_microservice_share
+//replace github.com/bindways/bw_microservice_share => ./../bw_microservice_share
 
 //replace github.com/bindways/bw_microservice_share2 => ./../bw_microservice_share2
 
