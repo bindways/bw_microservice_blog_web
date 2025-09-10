@@ -5,8 +5,8 @@ import (
 	"github.com/bindways/bw_microservice_share/bw_helper/bw_error_helper"
 	"github.com/bindways/bw_microservice_share/bw_microservice/bw_microservice_gateway_frontend/bw_router"
 	"github.com/bindways/bw_microservice_share/bw_server"
-	bw_handler_gin "github.com/bindways/bw_microservice_share2/bw_gin"
-	"github.com/gin-gonic/gin"
+	"github.com/bindways/bw_microservice_share2/bw_fiber"
+	"github.com/gofiber/fiber/v2"
 )
 
 /**
@@ -16,13 +16,13 @@ import (
  * we pass to index angular file index.html.
  */
 func BwWebBlogServer() {
-	engine := gin.Default()
-	new(bw_handler_gin.BwMetricConfig).
-		Constructor1(engine).
+	app := fiber.New()
+	new(bw_fiber.BwMetricConfig).
+		Constructor1(app).
 		ConfigMiddleware().
 		ConfigCustomHandler("health")
-	new(api.BwArticleWebController).Constructor1().Controller(engine)
+	new(api.BwArticleWebController).Constructor1().Controller(app)
 	bw_server.BwMicroservicePrintServer(&bw_router.BwMicroserviceBlogWeb)
-	err := engine.Run(bw_router.BwMicroserviceBlogWeb.GetPortHttp())
+	err := app.Listen(bw_router.BwMicroserviceBlogWeb.GetPortHttp())
 	bw_error_helper.CheckPanic(err)
 }

@@ -2,10 +2,9 @@ package api
 
 import (
 	web2 "bw_microservice_blog_web/main/core/web"
-	"encoding/json"
 	"fmt"
-	bw_helper "github.com/bindways/bw_microservice_share2/bw_gin"
-	"github.com/gin-gonic/gin"
+	"github.com/bindways/bw_microservice_share2/bw_fiber"
+	"github.com/gofiber/fiber/v2"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"net/http"
 )
@@ -19,63 +18,49 @@ func (t *BwArticleWebController) Constructor1() *BwArticleWebController {
 	return t
 }
 
-func (t *BwArticleWebController) Controller(engine *gin.Engine) {
+func (t *BwArticleWebController) Controller(app *fiber.App) {
 
 	/**
 	 * return static assets
 	 */
-	engine.GET("/:project/blog/web/assets/*remain",
-		func(context *gin.Context) {
-			remainPath := context.Param("remain")
-			context.File(fmt.Sprintf("static/assets/%s", remainPath))
-		},
-	)
+	app.Get("/:project/blog/web/assets/*", func(c *fiber.Ctx) error {
+		//project := c.Params("project")
+		remainPath := c.Params("*")
+		return c.SendFile(fmt.Sprintf("static/assets/%s", remainPath))
+	})
 
 	/**
 	 * Get articles
 	 */
-	engine.GET("/:project/blog/web/",
-		func(context *gin.Context) {
-			project := context.Param("project")
-			if err := t.articleServiceDep.GetArticles(context.Writer, project); err != nil {
-				_ = json.NewEncoder(context.Writer).Encode(err.Error())
-				return
-			}
-			context.Writer.WriteHeader(http.StatusOK)
-		},
-	)
+	app.Get("/:project/blog/web/", func(c *fiber.Ctx) (err error) {
+		project := c.Params("project")
+		if err = t.articleServiceDep.GetArticles(c, project); err != nil {
+			return bw_fiber.NewErrorResponseFiber(c, err, http.StatusBadRequest)
+		}
+		return
+	})
 
 	/**
 	 * Get article by id
 	 */
-	engine.GET("/:project/blog/web/article/name/:urlName",
-		func(context *gin.Context) {
-			urlName := context.Param("urlName")
-			project := context.Param("project")
-			if err := t.articleServiceDep.GetArticleByName(context.Writer, urlName, project); err != nil {
-				bw_helper.NewErrorResponse400(context, err)
-				return
-			}
-			context.Writer.WriteHeader(http.StatusOK)
-		},
-	)
+	app.Get("/:project/blog/web/article/name/:urlName", func(c *fiber.Ctx) (err error) {
+		urlName := c.Params("urlName")
+		project := c.Params("project")
+		if err := t.articleServiceDep.GetArticleByName(c, urlName, project); err != nil {
+			return bw_fiber.NewErrorResponseFiber(c, err, http.StatusBadRequest)
+		}
+		return c.SendStatus(http.StatusOK)
+	})
 
 	/**
 	 * Get article by id (old format)
 	 */
-	engine.GET("/:project/blog/web/article/:id",
-		func(context *gin.Context) {
-			idArticle, err := primitive.ObjectIDFromHex(context.Param("id"))
-			project := context.Param("project")
-			if err = t.articleServiceDep.GetArticleById(context.Writer, idArticle, project); err != nil {
-				_ = json.NewEncoder(context.Writer).Encode(err.Error())
-				return
-			}
-			context.Writer.WriteHeader(http.StatusOK)
-		},
-	)
-
-	engine.NoRoute(func(c *gin.Context) {
-		c.JSON(http.StatusNotFound, gin.H{"message": "Not found router.", "path": c.Request.URL.Path})
+	app.Get("/:project/blog/web/article/:id", func(c *fiber.Ctx) (err error) {
+		idArticle, err := primitive.ObjectIDFromHex(c.Params("id"))
+		project := c.Params("project")
+		if err = t.articleServiceDep.GetArticleById(c, idArticle, project); err != nil {
+			return bw_fiber.NewErrorResponseFiber(c, err, http.StatusBadRequest)
+		}
+		return c.SendStatus(http.StatusOK)
 	})
 }
