@@ -5,9 +5,9 @@ import (
 	"bw_microservice_blog_web/main/external"
 	"github.com/bindways/bw_microservice_share/bw_microservice/bw_microservice_blog/dto"
 	entity2 "github.com/bindways/bw_microservice_share/bw_microservice/bw_microservice_blog/entity"
+	"github.com/gofiber/fiber/v2"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"html/template"
-	"net/http"
 )
 
 type BwArticleWebService struct {
@@ -33,8 +33,8 @@ func (t *BwArticleWebService) Constructor2(
 /**
  * Get all articles to customer and SEO
  */
-func (t *BwArticleWebService) GetArticles(w http.ResponseWriter, project string) (err error) {
-	articles, err := t.microserviceBlogExternalDep.GetArticlesByProject(project)
+func (t *BwArticleWebService) GetArticles(c *fiber.Ctx, projectName string) (err error) {
+	articles, err := t.microserviceBlogExternalDep.GetArticlesByProject(projectName)
 	if err != nil {
 		return
 	}
@@ -44,36 +44,37 @@ func (t *BwArticleWebService) GetArticles(w http.ResponseWriter, project string)
 	if err != nil {
 		return
 	}
-	articleData := entity.NewBwArticleData(project, dto.NewBwArticlesD1(articles))
-	return tmpl.Execute(w, articleData)
+	articlesD1 := dto.NewBwArticlesD1(articles)
+	articleData := entity.NewBwArticleData(projectName, articlesD1)
+	return tmpl.Execute(c.Type("html"), articleData)
 }
 
 /**
  * Get article by name
  */
-func (t *BwArticleWebService) GetArticleByName(w http.ResponseWriter, urlName string, project string) (err error) {
-	article, err := t.microserviceBlogExternalDep.GetArticleByName(urlName, project)
+func (t *BwArticleWebService) GetArticleByName(c *fiber.Ctx, urlName string, projectName string) (err error) {
+	article, err := t.microserviceBlogExternalDep.GetArticleByName(urlName, projectName)
 	if err != nil {
 		return
 	}
-	return t.ProcessArticle(w, project, article)
+	return t.ProcessArticle(c, projectName, article)
 }
 
 /**
  * Get article by id
  */
-func (t *BwArticleWebService) GetArticleById(w http.ResponseWriter, idArticle primitive.ObjectID, project string) (err error) {
+func (t *BwArticleWebService) GetArticleById(c *fiber.Ctx, idArticle primitive.ObjectID, project string) (err error) {
 	article, err := t.microserviceBlogExternalDep.GetArticleByIdAndProject(idArticle, project)
 	if err != nil {
 		return
 	}
-	return t.ProcessArticle(w, project, article)
+	return t.ProcessArticle(c, project, article)
 }
 
 /**
  * Process article building as template html and return to frontend
  */
-func (t *BwArticleWebService) ProcessArticle(w http.ResponseWriter, project string, article entity2.BwArticle) (err error) {
+func (t *BwArticleWebService) ProcessArticle(c *fiber.Ctx, project string, article entity2.BwArticle) (err error) {
 	articlesD1, err := t.microserviceBlogExternalDep.GetArticlesByProjectLimitedSize(project)
 	if err != nil {
 		return
@@ -86,5 +87,5 @@ func (t *BwArticleWebService) ProcessArticle(w http.ResponseWriter, project stri
 	if err != nil {
 		return
 	}
-	return tmpl.Execute(w, articleD2)
+	return tmpl.Execute(c.Type("html"), articleD2)
 }

@@ -8,9 +8,13 @@
     <meta property="og:description" content="{{.Article.Metadata.OgDescription}}">
     <meta property="og:image" content="{{.Article.Metadata.OgImage}}">
     <meta content="width=device-width, initial-scale=1" name="viewport">
+    {{if eq .Article.Project "bwc"}}
+    <base href="/blog/web/">
+    {{else}}
     <base href="/{{.Article.Project}}/blog/web/">
+    {{end}}
     <link rel="stylesheet" href="assets/bw-css/bw-imports.css">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/blog/web/assets/favicon.ico">
     <link rel="canonical" href="{{.ProjectUrl}}/blog/web/article/name/{{.Article.Metadata.UrlName}}">
     <title>{{.Article.Metadata.Title}}</title>
     <script type="application/ld+json">
