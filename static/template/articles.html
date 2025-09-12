@@ -3,9 +3,9 @@
 <head class="title">
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    {{if eq .Article.Project "bwc"}}
+    {{if eq .ProjectName "bwc"}}
         <base href="/blog/web/">
-    {{else if eq .Article.Project "bwt"}}
+    {{else if eq .ProjectName "bwt"}}
         <base href="/blog/web/">
     {{else}}
         <base href="/{{.ProjectName}}/blog/web/">
