@@ -9,9 +9,11 @@
     <meta property="og:image" content="{{.Article.Metadata.OgImage}}">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     {{if eq .Article.Project "bwc"}}
-    <base href="/blog/web/">
+        <base href="/blog/web/">
+    {{else if eq .Article.Project "bwt"}}
+        <base href="/blog/web/">
     {{else}}
-    <base href="/{{.Article.Project}}/blog/web/">
+        <base href="/{{.Article.Project}}/blog/web/">
     {{end}}
     <link rel="stylesheet" href="assets/bw-css/bw-imports.css">
     <link rel="icon" type="image/x-icon" href="/blog/web/assets/favicon.ico">
