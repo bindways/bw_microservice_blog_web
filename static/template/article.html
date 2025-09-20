@@ -12,6 +12,8 @@
         <base href="/blog/web/">
     {{else if eq .Article.Project "bwt"}}
         <base href="/blog/web/">
+    {{else if eq .Article.Project "bwg"}}
+    <base href="/blog/web/">
     {{else}}
         <base href="/{{.Article.Project}}/blog/web/">
     {{end}}

@@ -648,33 +648,33 @@
   }
 
   .bw-font-md-54px {
-    font-size: 54px;
-    line-height: 62px;
+    font-size: 54px !important;;
+    line-height: 62px !important;;
   }
 
   .bw-font-md-58px {
-    font-size: 58px;
-    line-height: 64px;
+    font-size: 58px !important;;
+    line-height: 64px !important;;
   }
 
   .bw-font-md-60px {
-    font-size: 60px;
-    line-height: 68px;
+    font-size: 60px !important;;
+    line-height: 68px !important;;
   }
 
   .bw-font-md-70px {
-    font-size: 70px;
-    line-height: 78px;
+    font-size: 70px !important;;
+    line-height: 78px !important;;
   }
 
   .bw-font-md-72px {
-    font-size: 72px;
-    line-height: 80px;
+    font-size: 72px !important;
+    line-height: 80px !important;
   }
 
   .bw-font-md-85px {
-    font-size: 85px;
-    line-height: 105px;
+    font-size: 85px !important;;
+    line-height: 105px !important;;
   }
 
   /*LINE HEIGHT*/
@@ -1156,6 +1156,11 @@
     line-height: 75px !important;
   }
 
+  .bw-font-xl-58px {
+    font-size: 58px !important;
+    line-height: 64px !important;
+  }
+
   .bw-font-xl-60px {
     font-size: 60px !important;
     line-height: 80px !important;
@@ -1169,11 +1174,6 @@
   .bw-font-xl-70px {
     font-size: 70px !important;
     line-height: 90px !important;
-  }
-
-  .bw-font-xl-58px {
-    font-size: 58px !important;
-    line-height: 64px !important;
   }
 
   .bw-font-xl-80px {
