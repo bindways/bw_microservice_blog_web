@@ -2,8 +2,6 @@ github.com/andybalholm/brotli v1.0.5 h1:8uQZIdzKmjc/iuPu7O2ioW48L81FgatrcpfFmiq/
 github.com/andybalholm/brotli v1.0.5/go.mod h1:fO7iG3H7G2nSZ7m0zPUDn85XEX2GTukHGRSepvi9Eig=
 github.com/beorn7/perks v1.0.1 h1:VlbKKnNfV8bJzeqoa4cOKqO6bYr3WgKZxO8Z16+hsOM=
 github.com/beorn7/perks v1.0.1/go.mod h1:G2ZrVWU2WbWT9wwq4/hrbKbnv/1ERSJQ0ibhJ6rlkpw=
-github.com/bindways/bw_microservice_share v1.7.9 h1:RR1OBnpG3+vqz/QYiBw/PAwD62HMMDUhYQIUDTYpNpQ=
-github.com/bindways/bw_microservice_share v1.7.9/go.mod h1:OL0UfWNIEFFa+a2Y+0QzrSql4/J2p+0IgHrziX2eak4=
 github.com/bindways/bw_microservice_share2 v1.2.1 h1:GqmwFxu4iF5+L3rvRHBgH+q4FRPHUSp7qtktEkkULyI=
 github.com/bindways/bw_microservice_share2 v1.2.1/go.mod h1:GAyPR6jxPA7ocQckXGl8Ayef5txATZ1/glAtI+Tm+14=
 github.com/cespare/xxhash/v2 v2.3.0 h1:UL815xU9SqsFlibzuggzjXhog7bL6oX9BbNZnL2UFvs=
