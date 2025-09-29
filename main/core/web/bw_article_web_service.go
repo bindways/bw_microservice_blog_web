@@ -84,6 +84,7 @@ func (t *BwArticleWebService) ProcessArticle(c *fiber.Ctx, project string, artic
 	tmpl, err := template.
 		New("article.html").
 		Funcs(t.pipeServiceDep.PipeDateLong()).
+		Funcs(t.pipeServiceDep.PipeObjectIdToHex()).
 		ParseFiles("static/template/article.html")
 	if err != nil {
 		return

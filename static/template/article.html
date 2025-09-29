@@ -24,10 +24,30 @@
 </head>
 
 <script>
-    const BASE_URL = window.location.protocol + "//" + window.location.hostname + ":" +  window.location.port;
-    function goToUrl() {
-        window.location.replace(BASE_URL);
+    const BASE_URL = window.location.protocol + "//" + window.location.hostname + ":" + window.location.port;
+
+    function clickProject(idArticle) {
+        fetch("https://bindways.com/bw/v1/blog/article/" + idArticle + "/track/click/project", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+        })
     }
+
+    function goToUrl(url) {
+        window.open(url, "_blank");
+    }
+
+    function goToProject(url, idArticle) {
+        clickProject(idArticle)
+        window.open(url, "_blank");
+    }
+
+    function goToUrlArticle(urlName) {
+        goToUrl(
+            BASE_URL + "/blog/web/article/name/" + urlName
+        )
+    }
+
 </script>
 
 <body class="bw-bgc-white">
@@ -36,7 +56,8 @@
 <div class="bw-bgc-grey-0 bw-font-open-sans-regular bw-sticky-top bw-p-1r bw-p-md-0">
     <div class="bw-flex bw-just-cont-btw bw-maxw-50r bw-ptb-1r bw-mrl-auto">
         <img class="bw-h-3r" alt="logo image bindways" src="assets/bw-svg/sm/{{.ProjectName}}/logo-horiz-grey.svg">
-        <button onclick="goToUrl()" class="bw-btn bw-btn-2 bw-btn-md-3 bw-btn-circle bw-btn-primary">
+        <button onclick="goToProject(BASE_URL, '{{.Article.Id | pipeObjectIdToHex}}')"
+                class="bw-btn bw-btn-2 bw-btn-md-3 bw-btn-circle bw-btn-primary">
             Acessar plataforma
         </button>
     </div>
@@ -53,7 +74,8 @@
                 Atualizado em {{.Article.UpdateAtDate | pipeDateLong}} - {{.Article.Track.Views}} visualizações
             </p>
             <audio controls class="bw-rad-1r">
-                <source src="http://localhost:8005/bw/v1/media/audio/buscar-socios-encontrar-socio.mp3" type="audio/mpeg">
+                <source src="http://localhost:8005/bw/v1/media/audio/buscar-socios-encontrar-socio.mp3"
+                        type="audio/mpeg">
                 Seu navegador não suporta o elemento de áudio.
             </audio>
         </div>
@@ -83,7 +105,8 @@
                 <p class="bw-font-20px bw-font-poppins-bold">{{.Header}}</p>
                 <p class="bw-font-16px">{{.Preview}}</p>
                 <div class="bw-flex bw-gap-1r bw-just-cont-btw bw-mt-1r">
-                    <button onclick="goToUrl('{{.UrlName}}')" class="bw-btn bw-btn-1 bw-btn-light-20">Ler mais</button>
+                    <button onclick="goToUrlArticle('{{.UrlName}}')" class="bw-btn bw-btn-1 bw-btn-light-20">Ler mais
+                    </button>
                     <p class="bw-font-14px">Atualizado em {{.UpdateAtDate | pipeDateLong}}</p>
                 </div>
             </div>
