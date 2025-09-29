@@ -1,6 +1,7 @@
 package web
 
 import (
+	dto2 "bw_microservice_blog_web/main/dto"
 	"bw_microservice_blog_web/main/entity"
 	"bw_microservice_blog_web/main/external"
 	"github.com/bindways/bw_microservice_share/bw_microservice/bw_microservice_blog/dto"
@@ -79,7 +80,7 @@ func (t *BwArticleWebService) ProcessArticle(c *fiber.Ctx, project string, artic
 	if err != nil {
 		return
 	}
-	articleD2 := dto.NewBwArticleD2(article, articlesD1)
+	articleD2 := dto2.NewBwArticleD2(article, articlesD1)
 	tmpl, err := template.
 		New("article.html").
 		Funcs(t.pipeServiceDep.PipeDateLong()).

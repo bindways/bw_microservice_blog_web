@@ -17,6 +17,7 @@
 
   /*GREY*/
   --grey-0: #f6f6f6;
+  --grey-5: #F3F3F3;
   --grey-10: #eeeeee;
   --grey-20: #DEE0E0;
   --grey-40: #E0E0E0;
@@ -69,6 +70,7 @@
   --green-20: #A5E1BF;
 
   --warning: #EFB008;
+  --yellow-10: #fffbed;
   --yellow-20: #FFF5D5;
   --yellow-30: #ffdf90;
   --yellow-40: #ffdb80;
@@ -80,7 +82,7 @@
 
   --purple-40: #5C47C4;
 
- /*Screen size*/
+  /*Screen size*/
   --min-width-sm: 576;
   --min-width-md: 768;
   --min-width-lg: 992;

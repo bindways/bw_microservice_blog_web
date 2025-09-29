@@ -8,22 +8,9 @@
     <meta property="og:description" content="{{.Article.Metadata.OgDescription}}">
     <meta property="og:image" content="{{.Article.Metadata.OgImage}}">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    {{if eq .Article.Project "bwc"}}
-        <base href="/blog/web/">
-    {{else if eq .Article.Project "bwt"}}
-        <base href="/blog/web/">
-    {{else if eq .Article.Project "bwn"}}
-        <base href="/blog/web/">
-    {{else if eq .Article.Project "bwp"}}
-        <base href="/blog/web/">
-    {{else if eq .Article.Project "bwg"}}
     <base href="/blog/web/">
-    {{else}}
-        <base href="/{{.Article.Project}}/blog/web/">
-    {{end}}
     <link rel="stylesheet" href="assets/bw-css/bw-imports.css">
     <link rel="icon" type="image/x-icon" href="/blog/web/assets/favicon.ico">
-    <link rel="canonical" href="{{.ProjectUrl}}/blog/web/article/name/{{.Article.Metadata.UrlName}}">
     <title>{{.Article.Metadata.Title}}</title>
     <script type="application/ld+json">
         {
@@ -37,19 +24,20 @@
 </head>
 
 <script>
-    function goToUrl(url) {
-        window.location.replace(url);
+    const BASE_URL = window.location.protocol + "//" + window.location.hostname + ":" +  window.location.port;
+    function goToUrl() {
+        window.location.replace(BASE_URL);
     }
 </script>
 
 <body class="bw-bgc-white">
 
 <!--Toolbar-->
-<div class="bw-bgc-light-10 bw-font-segoe bw-sticky-top bw-p-1r bw-p-md-0">
+<div class="bw-bgc-grey-0 bw-font-open-sans-regular bw-sticky-top bw-p-1r bw-p-md-0">
     <div class="bw-flex bw-just-cont-btw bw-maxw-50r bw-ptb-1r bw-mrl-auto">
-        <img class="bw-h-2_5r" alt="logo image bindways" src="assets/bw-svg/sm/logo-horiz-bindways-blue.svg">
-        <button onclick="goToUrl('{{.ProjectUrl}}')" class="bw-btn bw-btn-2 bw-btn-md-3 bw-btn-circle bw-btn-primary">
-            Acessar projeto
+        <img class="bw-h-3r" alt="logo image bindways" src="assets/bw-svg/sm/{{.ProjectName}}/logo-horiz-grey.svg">
+        <button onclick="goToUrl()" class="bw-btn bw-btn-2 bw-btn-md-3 bw-btn-circle bw-btn-primary">
+            Acessar plataforma
         </button>
     </div>
 </div>
@@ -81,21 +69,21 @@
     <!--    Hashtags-->
     <div class="bw-mt-3r bw-mb-2r bw-flex bw-flex-wrap bw-gap-05r">
         {{range .Article.HashtagList}}
-        <span class="bw-badge bw-badge-md bw-badge-blue bw-badge-circle">{{.}}</span>
+        <span class="bw-badge bw-badge-md bw-badge-out-grey-60 bw-badge-circle">{{.}}</span>
         {{end}}
     </div>
 
     <!--    Related articles-->
-    <h4 class="bw-font-30px bw-font-segoe-bold">Artigos relacionados</h4>
+    <h4 class="bw-font-30px bw-font-poppins-bold">Artigos relacionados</h4>
     <div class="bw-mt-2r bw-mb-2r bw-flex bw-flex-col bw-gap-1r">
         {{range .ArticleD1List}}
         <div class="bw-flex bw-gap-1r bw-just-cont-cent bw-flex-wrap bw-p-1r bw-b-light-30 bw-rad-1r bw-shadow-1">
             <img class="bw-h-10r bw-maxw-10r bw-basis-10r" alt="image head article" src="{{.HeaderImage}}">
             <div class="bw-basis-25r bw-grow-1">
-                <p class="bw-font-20px bw-font-segoe-bold">{{.Header}}</p>
+                <p class="bw-font-20px bw-font-poppins-bold">{{.Header}}</p>
                 <p class="bw-font-16px">{{.Preview}}</p>
                 <div class="bw-flex bw-gap-1r bw-just-cont-btw bw-mt-1r">
-                    <button onclick="goToUrl('{{.SelfUrl}}')" class="bw-btn bw-btn-1 bw-btn-light-20">Ler mais</button>
+                    <button onclick="goToUrl('{{.UrlName}}')" class="bw-btn bw-btn-1 bw-btn-light-20">Ler mais</button>
                     <p class="bw-font-14px">Atualizado em {{.UpdateAtDate | pipeDateLong}}</p>
                 </div>
             </div>

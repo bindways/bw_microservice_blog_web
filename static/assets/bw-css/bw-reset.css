@@ -3,22 +3,22 @@
    License: none (public domain)
 */
 h1{
-  font-family: segoe-ui-bold, serif;
+  font-family: bw-font-poppins-bold, sans-serif;
   font-size: 40px;
   line-height: 45px;
 }
 h2{
-  font-family: segoe-ui-bold, serif;
+  font-family: bw-font-poppins-bold, sans-serif;
   font-size: 32px;
   line-height: 36px;
 }
 h3{
-  font-family: segoe-ui-semi-bold, serif;
+  font-family: bw-font-poppins-semi-bold, sans-serif;
   font-size: 24px;
   line-height: 36px;
 }
 h4{
-  font-family: segoe, serif;
+  font-family: bw-font-poppins-regular, sans-serif;
   font-size: 18px;
   line-height: 22px;
 }
@@ -44,6 +44,7 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
   box-sizing: border-box;
+  font-family: open-sans-regular, sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,

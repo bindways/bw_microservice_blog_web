@@ -1,440 +1,426 @@
-/*Segoe*/
-@font-face {
-  font-family: segoe;
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-  src:
-    url('../bw-font/segoe/segoe-ui.woff2') format('woff2'),
-    url('../bw-font/segoe/segoe-ui.woff') format('woff');
-}
-.bw-font-segoe {
-  font-family: segoe, sans-serif;
-}
-
-/*Segoe-SemiBold*/
-@font-face {
-  font-family: segoe-ui-semi-bold;
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-  src:
-    url('../bw-font/segoe/segoe-ui-semi-bold.woff2') format('woff2'),
-    url('../bw-font/segoe/segoe-ui-semi-bold.woff') format('woff');
-}
-.bw-font-segoe-semibold {
-  font-family: segoe-ui-semi-bold, sans-serif;
-}
-
-/*Segoe-Bold*/
-@font-face {
-  font-family: segoe-ui-bold;
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-  src:
-    url('../bw-font/segoe/segoe-ui-bold.woff2') format('woff2'),
-    url('../bw-font/segoe/segoe-ui-bold.woff') format('woff');
-}
-.bw-font-segoe-bold {
-  font-family: segoe-ui-bold, sans-serif;
-}
-
-
-/*Segoe-Bold*/
-@font-face {
-  font-family: segoe-ui-light;
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-  src:
-    url('../bw-font/segoe/segoe-ui-light.woff2') format('woff2'),
-    url('../bw-font/segoe/segoe-ui-light.woff') format('woff');
-}
-.bw-font-segoe-light {
-  font-family: segoe-ui-light, sans-serif;
-}
-
-
-/*Roboto*/
-@font-face {
-  font-family: roboto-regular;
-  font-display: swap;
-  src: url(../bw-font/roboto/roboto-regular.woff2) format("woff2");
-}
-.bw-font-roboto {
-  font-family: roboto-regular, sans-serif;
-}
-
-/*Roboto-Bold*/
-@font-face {
-  font-family: roboto-bold;
-  font-display: swap;
-  src: url(../bw-font/roboto/roboto-bold.woff2) format("woff2");
-}
-.bw-font-roboto-bold {
-  font-family: roboto-bold, sans-serif;
-}
-
-
-/*Jost*/
-@font-face {
-  font-family: jost;
-  font-display: swap;
-  src: url(../bw-font/jost/jost.woff2) format("woff2");
-}
-.bw-font-jost {
-  font-family: jost, sans-serif;
-}
+/*Open Sans light*/
 
 @font-face {
-  font-family: jost-italic;
-  font-display: swap;
-  src: url(../bw-font/jost/jst-italic.woff2) format("woff2");
-}
-.bw-font-jost-i {
-  font-family: jost-italic, sans-serif;
+    font-family: "open-sans-light";
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    src: url('../bw-font/open-sans/open-sans-light-300.woff2') format('woff2');
 }
 
-
-/*Montserrat*/
+/* Open Sans Regular */
 @font-face {
-  font-family: montserrat-light;
-  font-display: swap;
-  src: url(../bw-font/montserrat/montserrat-light.woff2) format("woff2");
-}
-.bw-font-montserrat-light {
-  font-family: montserrat-light, sans-serif;
+    font-family: "open-sans-regular";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url('../bw-font/open-sans/open-sans-regular-400.woff2') format('woff2');
 }
 
+/* Open Sans Medium */
 @font-face {
-  font-family: montserrat-extra-light;
-  font-display: swap;
-  src: url(../bw-font/montserrat/montserrat-extra-light.woff2) format("woff2");
-}
-.bw-font-montserrat-extra-light {
-  font-family: montserrat-extra-light, sans-serif;
+    font-family: "open-sans-medium";
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    src: url('../bw-font/open-sans/open-sans-medium-500.woff2') format('woff2');
 }
 
+/* Open Sans SemiBold */
 @font-face {
-  font-family: montserrat-regular;
-  font-display: swap;
-  src: url(../bw-font/montserrat/montserrat-regular.woff2) format("woff2");
-}
-.bw-font-montserrat {
-  font-family: montserrat-regular, sans-serif;
+    font-family: "open-sans-semi-bold";
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    src: url('../bw-font/open-sans/open-sans-semi-bold-600.woff2') format('woff2');
 }
 
+/* Open Sans Bold */
 @font-face {
-  font-family: montserrat-medium;
-  font-display: swap;
-  src: url(../bw-font/montserrat/montserrat-medium.woff2) format("woff2");
-}
-.bw-font-montserrat-medium {
-  font-family: montserrat-medium, sans-serif;
+    font-family: "open-sans-bold";
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url('../bw-font/open-sans/open-sans-bold-700.woff2') format('woff2');
 }
 
+/* Open Sans ExtraBold */
 @font-face {
-  font-family: montserrat-semi-bold;
-  font-display: swap;
-  src: url(../bw-font/montserrat/montserrat-semi-bold.woff2) format("woff2");
+    font-family: "open-sans-extra-bold";
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+    src: url('../bw-font/open-sans/open-sans-extra-bold-800.woff2') format('woff2');
 }
-.bw-font-montserrat-semi-bold {
-  font-family: montserrat-semi-bold, sans-serif;
-}
-
-@font-face {
-  font-family: montserrat-bold;
-  font-display: swap;
-  src: url(../bw-font/montserrat/montserrat-bold.woff2) format("woff2");
-}
-.bw-font-montserrat-bold {
-  font-family: montserrat-bold, sans-serif;
-}
-
 
 
 /*Poppins*/
 @font-face {
-  font-family: poppins-thin;
-  font-display: swap;
-  src: url(../bw-font/poppins/poppins-thin.woff2) format("woff2");
+    font-family: poppins-thin;
+    font-display: swap;
+    src: url(../bw-font/poppins/poppins-v22-latin-100.woff2) format("woff2");
 }
+
+@font-face {
+    font-family: poppins-extra-ligth;
+    font-display: swap;
+    src: url(../bw-font/poppins/poppins-v22-latin-200.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: poppins-ligth;
+    font-display: swap;
+    src: url(../bw-font/poppins/poppins-v22-latin-300.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: poppins-regular;
+    font-display: swap;
+    src: url(../bw-font/poppins/poppins-v22-latin-regular.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: poppins-medium;
+    font-display: swap;
+    src: url(../bw-font/poppins/poppins-v22-latin-500.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: poppins-semi-bold;
+    font-display: swap;
+    src: url(../bw-font/poppins/poppins-v22-latin-600.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: poppins-bold;
+    font-display: swap;
+    src: url(../bw-font/poppins/poppins-v22-latin-700.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: poppins-extra-bold;
+    font-display: swap;
+    src: url(../bw-font/poppins/poppins-v22-latin-800.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: poppins-black;
+    font-display: swap;
+    src: url(../bw-font/poppins/poppins-v22-latin-900.woff2) format("woff2");
+}
+
+
+.bw-font-open-sans-light {
+    font-family: open-sans-light, sans-serif;
+}
+
+.bw-font-open-sans-regular {
+    font-family: open-sans-regular, sans-serif;
+}
+
+.bw-font-open-sans-medium {
+    font-family: open-sans-medium, sans-serif;
+}
+
+.bw-font-open-sans-semi-bold {
+    font-family: open-sans-semi-bold, sans-serif;
+}
+
+.bw-font-open-sans-bold {
+    font-family: open-sans-bold, sans-serif;
+}
+
+.bw-font-open-sans-extra-bold {
+    font-family: open-sans-extra-bold, sans-serif;
+}
+
 .bw-font-poppins-thin {
-  font-family: poppins-thin, sans-serif;
+    font-family: poppins-thin, sans-serif;
 }
 
-@font-face {
-  font-family: poppins-regular;
-  font-display: swap;
-  src: url(../bw-font/poppins/poppins-regular.woff2) format("woff2");
+.bw-font-poppins-extra-light {
+    font-family: poppins-extra-ligth, sans-serif;
 }
+
+.bw-font-poppins-light {
+    font-family: poppins-ligth, sans-serif;
+}
+
+.bw-font-poppins-medium {
+    font-family: poppins-medium, sans-serif;
+}
+
 .bw-font-poppins-regular {
-  font-family: poppins-regular, sans-serif;
+    font-family: poppins-regular, sans-serif;
 }
 
-@font-face {
-  font-family: poppins-bold;
-  font-display: swap;
-  src: url(../bw-font/poppins/poppins-bold.woff2) format("woff2");
+.bw-font-poppins-semi-bold {
+    font-family: poppins-semi-bold, sans-serif;
 }
+
 .bw-font-poppins-bold {
-  font-family: poppins-bold, sans-serif;
+    font-family: poppins-bold, sans-serif;
 }
 
+.bw-font-poppins-extra-bold {
+    font-family: poppins-extra-bold, sans-serif;
+}
 
+.bw-font-poppins-black {
+    font-family: poppins-black, sans-serif;
+}
 
 /*FONT SIZE*/
 .bw-font-10px {
-  font-size: 10px;
-  line-height: 14px;
+    font-size: 10px;
+    line-height: 14px;
 }
 
 .bw-font-12px {
-  font-size: 12px;
-  line-height: 16px;
+    font-size: 12px;
+    line-height: 16px;
 }
 
 .bw-font-12px-i {
-  font-size: 12px !important;
-  line-height: 16px !important;
+    font-size: 12px !important;
+    line-height: 16px !important;
 }
 
 .bw-font-14px {
-  font-size: 14px;
-  line-height: 20px;
+    font-size: 14px;
+    line-height: 20px;
 }
 
 .bw-font-14px-i {
-  font-size: 14px !important;
-  line-height: 20px !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
 }
 
 .bw-font-15px {
-  font-size: 15px;
-  line-height: 21px;
+    font-size: 15px;
+    line-height: 21px;
 }
 
 .bw-font-16px {
-  font-size: 16px;
-  line-height: 22px;
+    font-size: 16px;
+    line-height: 22px;
 }
 
 .bw-font-16px-i {
-  font-size: 16px !important;
-  line-height: 22px !important;;
+    font-size: 16px !important;
+    line-height: 22px !important;;
 }
 
 .bw-font-18px {
-  font-size: 18px;
-  line-height: 26px;
+    font-size: 18px;
+    line-height: 26px;
 }
 
 .bw-font-18px-i {
-  font-size: 18px !important;
-  line-height: 26px !important;;
+    font-size: 18px !important;
+    line-height: 26px !important;;
 }
 
 .bw-font-20px {
-  font-size: 20px;
-  line-height: 35px;
+    font-size: 20px;
+    line-height: 35px;
 }
 
 .bw-font-20px-i {
-  font-size: 20px !important;
-  line-height: 35px !important;
+    font-size: 20px !important;
+    line-height: 35px !important;
 }
 
 .bw-font-22px {
-  font-size: 22px;
-  line-height: 26px;
+    font-size: 22px;
+    line-height: 26px;
 }
 
 .bw-font-24px {
-  font-size: 24px;
-  line-height: 30px;
+    font-size: 24px;
+    line-height: 30px;
 }
 
 .bw-font-28px {
-  font-size: 28px;
-  line-height: 33px;
+    font-size: 28px;
+    line-height: 33px;
 }
 
 .bw-font-30px {
-  font-size: 30px;
-  line-height: 40px;
+    font-size: 30px;
+    line-height: 40px;
 }
 
 .bw-font-32px {
-  font-size: 32px;
-  line-height: 46px;
+    font-size: 32px;
+    line-height: 46px;
 }
 
 .bw-font-34px {
-  font-size: 34px;
-  line-height: 40px;
+    font-size: 34px;
+    line-height: 40px;
 }
 
 .bw-font-40px {
-  font-size: 40px;
-  line-height: 45px
+    font-size: 40px;
+    line-height: 45px
 }
 
 .bw-font-42px {
-  font-size: 42px;
-  line-height: 55px
+    font-size: 42px;
+    line-height: 55px
 }
 
 .bw-font-47 {
-  font-size: 47px;
-  line-height: 65px;
+    font-size: 47px;
+    line-height: 65px;
 }
 
 .bw-font-48px {
-  font-size: 48px;
-  line-height: 68px;
+    font-size: 48px;
+    line-height: 68px;
 }
 
 .bw-font-50px {
-  font-size: 50px;
-  line-height: 70px;
+    font-size: 50px;
+    line-height: 70px;
 }
 
 .bw-font-55px {
-  font-size: 55px;
-  line-height: 75px;
+    font-size: 55px;
+    line-height: 75px;
 }
 
-.bw-font-60px{
-  font-size: 60px;
-  line-height: 80px;
+.bw-font-60px {
+    font-size: 60px;
+    line-height: 80px;
 }
 
-.bw-font-65px{
-  font-size: 65px;
-  line-height: 85px;
+.bw-font-65px {
+    font-size: 65px;
+    line-height: 85px;
 }
 
-.bw-font-70px{
-  font-size: 70px;
-  line-height: 90px;
+.bw-font-70px {
+    font-size: 70px;
+    line-height: 90px;
 }
 
-.bw-font-72px{
-  font-size: 72px;
-  line-height: 92px;
+.bw-font-72px {
+    font-size: 72px;
+    line-height: 92px;
 }
 
-.bw-font-58px{
-  font-size: 58px;
-  line-height: 64px;
+.bw-font-58px {
+    font-size: 58px;
+    line-height: 64px;
 }
 
-.bw-font-74px{
-  font-size: 74px;
-  line-height: 85px;
+.bw-font-74px {
+    font-size: 74px;
+    line-height: 85px;
 }
 
-.bw-font-80px{
-  font-size: 80px;
-  line-height: 95px;
+.bw-font-80px {
+    font-size: 80px;
+    line-height: 95px;
 }
 
-.bw-font-85px{
-  font-size: 85px;
-  line-height: 105px;
+.bw-font-85px {
+    font-size: 85px;
+    line-height: 105px;
 }
 
 .bw-font-bold {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .bw-font-normal {
-  font-weight: normal;
+    font-weight: normal;
 }
 
 .bw-font-lighter {
-  font-weight: lighter;
+    font-weight: lighter;
 }
 
 .bw-font-normal {
-  font-weight: normal;
+    font-weight: normal;
 }
 
-.bw-lh-10px{
-  line-height: 10px;
+.bw-lh-10px {
+    line-height: 10px;
 }
 
-.bw-lh-12px{
-  line-height: 12px;
+.bw-lh-12px {
+    line-height: 12px;
 }
 
-.bw-lh-14px{
-  line-height: 14px;
+.bw-lh-14px {
+    line-height: 14px;
 }
 
-.bw-lh-16px{
-  line-height: 16px;
+.bw-lh-16px {
+    line-height: 16px;
 }
 
-.bw-lh-18px{
-  line-height: 18px;
+.bw-lh-18px {
+    line-height: 18px;
 }
 
-.bw-lh-20px{
-  line-height: 20px;
+.bw-lh-20px {
+    line-height: 20px;
 }
 
-.bw-lh-24px{
-  line-height: 24px;
+.bw-lh-24px {
+    line-height: 24px;
 }
 
-.bw-lh-28px{
-  line-height: 28px;
+.bw-lh-28px {
+    line-height: 28px;
 }
 
-.bw-lh-30px{
-  line-height: 30px;
+.bw-lh-30px {
+    line-height: 30px;
 }
 
-.bw-lh-35px{
-  line-height: 35px;
+.bw-lh-35px {
+    line-height: 35px;
 }
 
-.bw-lh-46px{
-  line-height: 46px;
+.bw-lh-46px {
+    line-height: 46px;
 }
 
-.bw-lh-70px{
-  line-height: 70px;
+.bw-lh-70px {
+    line-height: 70px;
 }
 
-.bw-lh-85px{
-  line-height: 85px;
+.bw-lh-85px {
+    line-height: 85px;
 }
 
-.bw-weight-500{
-  font-weight: 500;
+.bw-weight-500 {
+    font-weight: 500;
 }
 
 .bw-weight-600 {
- font-weight: 600;
+    font-weight: 600;
 }
 
 .bw-weight-700 {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 .bw-font-bold-hover:hover {
-  font-weight: bolder;
+    font-weight: bolder;
 }
 
 /*FONT STYLE*/
 
-.bw-italic{
-  font-style: italic;
+.bw-italic {
+    font-style: italic;
 }
 
 .bw-scale-08 {
-  transform: scale(0.8);
+    transform: scale(0.8);
 }
