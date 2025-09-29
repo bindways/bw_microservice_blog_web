@@ -27,7 +27,7 @@
     const BASE_URL = window.location.protocol + "//" + window.location.hostname + ":" + window.location.port;
 
     function clickProject(idArticle) {
-        fetch("https://bindways.com:8080/bw/v1/blog/article/" + idArticle + "/track/click/project", {
+        fetch("https://bindways.com:8080/bw/v1/blog/track/click/project/article/"+ idArticle , {
             method: "POST",
             headers: {"Content-Type": "application/json"},
         })
