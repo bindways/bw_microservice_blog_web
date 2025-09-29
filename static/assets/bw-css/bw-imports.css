@@ -22,7 +22,7 @@ html, body{
 }
 
 body {
-  font-family: segoe, sans-serif;
+  font-family: open-sans-regular, sans-serif;
   color: var(--grey-80);
   font-size: 16px;
   position: relative;

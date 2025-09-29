@@ -9,7 +9,7 @@ require (
 	go.mongodb.org/mongo-driver v1.11.6
 )
 
-//replace github.com/bindways/bw_microservice_share => ./../bw_microservice_share
+replace github.com/bindways/bw_microservice_share => ./../bw_microservice_share
 
 //replace github.com/bindways/bw_microservice_share2 => ./../bw_microservice_share2
 

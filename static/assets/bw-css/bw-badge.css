@@ -7,7 +7,7 @@
   white-space: nowrap;
   overflow: hidden;
   border-radius: 0.4rem;
-  /*height: 100%;*/
+  font-family: open-sans-regular, sans-serif;
 }
 
 .bw-badge-inline{
@@ -24,6 +24,10 @@
 }
 
 .bw-badge-circle {
+  border-radius: 2rem;
+}
+
+.bw-badge-semi-circle {
   border-radius: 1rem;
 }
 
@@ -62,6 +66,11 @@
   color: var(--grey-80);
 }
 
+.bw-badge-red {
+  background: var(--red-40);
+  color: var(--grey-90);
+}
+
 .bw-badge-out-orange {
   border: solid thin var(--orange-60);
   color: var(--orange-60);
@@ -82,9 +91,15 @@
   color: var(--primary-100);
 }
 
-.bw-badge-grey {
+.bw-badge-grey-20 {
   background: var(--grey-20);
   color: var(--grey-80);
+}
+
+.bw-badge-grey-10 {
+  background: var(--grey-10);
+  color: var(--grey-80);
+  border: solid thin var(--grey-10);
 }
 
 .bw-badge-blue {
@@ -96,7 +111,7 @@
 .bw-badge-out-blue {
   border: solid thin var(--primary-100);
   color: var(--primary-100);
-  font-family: segoe-ui-semi-bold, serif;
+  font-family: poppins-semi-bold, serif;
 }
 
 .bw-badge-out-grey-06 {
@@ -105,7 +120,7 @@
 }
 
 
-.bw-badge-out-grey-04 {
+.bw-badge-out-grey-60 {
   border: solid thin var(--grey-60);
   color: var(--grey-70);
 }
